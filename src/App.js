@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+function Greetings () {
+  return(
+    <>
+      <p>Temiloluwa is here</p><button>Click Me</button>
+    </>
+  )
+}
 
-function App() {
+const lists = ['Daniel', 'Temiloluwa', 'Micheal', 'Ifeoluwapipe', 'Allison', 'Eniola']
+
+const ListItems = lists.map(list => {
+  return (
+    <li>{lists}</li>
+  )
+})
+
+function UserProfileCard () {
+  return (
+    <div>
+      <name>Daniel Obisanya</name><br/>
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" height="100"/>
+     
+    </div>
+  )
+}
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World</h1>
+      <Greetings/>
+      <UserProfileCard/>
     </div>
   );
-}
+};
 
 export default App;
